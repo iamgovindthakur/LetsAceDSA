@@ -2,6 +2,7 @@ package binarysearch;
 
 import java.util.Arrays;
 
+//LC-34
 public class FindFirstAndLastPositionOfElementInSortedArray {
 
     static int firstOccurrence(int[] nums, int target) {
@@ -19,7 +20,7 @@ public class FindFirstAndLastPositionOfElementInSortedArray {
 
     static public int[] searchRange(int[] nums, int target) {
         int firstIndex = firstOccurrence(nums, target);
-        if (nums[firstIndex] != target)
+        if (firstIndex == nums.length || nums[firstIndex] != target)
             return new int[]{-1, -1};
         int lastIndex = firstOccurrence(nums, target + 1) - 1;
         return new int[]{firstIndex, lastIndex};
@@ -27,8 +28,8 @@ public class FindFirstAndLastPositionOfElementInSortedArray {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{5, 7, 7, 8, 8, 10};
-        int target = 8;
+        int[] nums = new int[]{};
+        int target = 0;
         System.out.println(Arrays.toString(searchRange(nums, target)));
     }
 }
