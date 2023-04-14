@@ -1,4 +1,4 @@
-package Array;
+package array;
 
 public class KthMissingPositiveNumber {
     public static int findKthPositive(int[] arr, int k) {
