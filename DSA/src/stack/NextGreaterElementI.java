@@ -6,7 +6,7 @@ class NextGreaterElementI {
   static public int[] nextGreaterElement(int[] nums1, int[] nums2) {
     List<Integer> ans = new ArrayList<>();
     Map<Integer, Integer> numToNextGreater = new HashMap<>();
-    Deque<Integer> stack = new ArrayDeque<>(); // decreasing stack
+    Deque<Integer> stack = new ArrayDeque<>(); /// decreasing stack
 
     for (final int num : nums2) {
       while (!stack.isEmpty() && stack.peek() < num)
